@@ -1,0 +1,16 @@
+---
+- name: New Infrastructure
+  hosts: all
+  tasks:
+
+  - name: create new instance 
+    ec2_instance:
+      name: "pmali-AWX-test-instance"
+      key_name: "mykey"
+      vpc_subnet_id: subnet-123456
+      instance_type: t2.medium
+      region: ap-south-1
+      security_group: mygroup
+      network:
+        assign_public_ip: true
+      image_id: ami-1234567890
