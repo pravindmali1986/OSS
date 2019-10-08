@@ -1,3 +1,4 @@
+### Values are dummy, make sure you use the correct values for parameter
 ---
 - name: New Infrastructure
   hosts: all
@@ -5,7 +6,7 @@
 
   - name: create new instance 
     ec2_instance:
-      name: "pmali-AWX-test-instance"
+      name: "AWX-test-instance"
       key_name: "mykey"
       vpc_subnet_id: subnet-123456
       instance_type: t2.medium
